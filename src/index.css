@@ -11,3 +11,105 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.game-info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #888;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #333;
+}
+
+.square:hover {
+  background-color: #e0e0e0;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square.x {
+  color: #ff6347; 
+}
+
+.square.o {
+  color: #4682b4; 
+}
+
+.game-info ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.game-info button {
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.game-info button:hover {
+  background-color: #45a049;
+}
+
+.game-info button:focus {
+  outline: none;
+}
+
+
+.square.winner {
+  background-color: #ffeb3b;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+}
